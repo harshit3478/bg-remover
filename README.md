@@ -27,3 +27,4 @@ A modern web application that allows users to remove or change the background of
 2. Clone this repository:
 
 # bg-remover
+# bg-remover
