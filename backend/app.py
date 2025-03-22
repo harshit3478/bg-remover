@@ -67,7 +67,7 @@ def health_check():
 def remove_background():
     if 'image' not in request.files:
         return jsonify({'error': 'No image uploaded'}), 400
-    
+    print('request.files', request.files)
     file = request.files['image']
     if file.filename == '':
         return jsonify({'error': 'No image selected'}), 400
@@ -89,6 +89,7 @@ def remove_background():
         # Process image with rembg
         with open(input_path, 'rb') as f:
             img_data = f.read()
+        
         
         # Remove background
         output_data = remove(img_data)
