@@ -1,62 +1,8 @@
-# Dependencies
-/node_modules
-/.pnp
-.pnp.js
-/backend/venv
 
-# Testing
-/coverage
-
-# Next.js
-/.next/
-/out/
-.swc/
-
-# Production
-/build
-/dist
-
-# Misc
-.DS_Store
-*.pem
-.vscode/
-.idea/
-
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# Local env files
-.env*.local
-.env
-/backend/.env
-
-# Vercel
-.vercel
-
-# Typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# Python
-/backend/__pycache__/
-**/__pycache__/
-/backend/*.py[cod]
-/backend/*$py.class
-/backend/*.so
-/backend/env/
-/backend/.Python
-/backend/.env
-/backend/.venv
-/backend/*.log
-
-# Project specific
-/backend/uploads/*
-/backend/processed/*
-!backend/uploads/.gitkeep
-!backend/processed/.gitkeep
-
-# Docker
-.dockerignore
+frontend/node_modules
+backend/uploads
+backend/processed
+frontend/.env
+frontend/.next*
+frontend/.yarn 
+frontend/.vscode
