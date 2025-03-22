@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Background remover - Remove.bg',
+  description: 'Created with ☕️ and ❤️ by the Remove.bg team(harshit)',
+  generator : 'Harshit Agarwal - harshit3478(linkedin)',
 }
 
 export default function RootLayout({

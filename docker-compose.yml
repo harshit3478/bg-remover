@@ -1,14 +1,27 @@
 version: '3.8'
 
 services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./certs:/etc/nginx/certs
+    ports:
+      - "443:443"
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - app-network
+
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:5001/api
+      - NEXT_PUBLIC_API_URL=http://backend:5001/api
     networks:
       - app-network
     depends_on:
@@ -18,10 +31,10 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    ports:
-      - "5001:5001"  # Changed from 5000 to 5001
+    expose:
+      - "5001"
     environment:
-      - CORS_ALLOW_ORIGINS=http://localhost:3000,http://frontend:3000
+      - CORS_ALLOW_ORIGINS=http://localhost,https://localhost,http://nginx,https://nginx,https://bg-remover-2m1j.onrender.com
     volumes:
       - ./backend/uploads:/app/uploads
       - ./backend/processed:/app/processed
@@ -31,4 +44,3 @@ services:
 networks:
   app-network:
     driver: bridge
-
