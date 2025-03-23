@@ -12,7 +12,7 @@ import shutil
 
 app = Flask(__name__)
 # Configure CORS to accept requests from all origins, specifically allowing the frontend origin
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000" , "*" , "https://bg-remover-sable.vercel.app"]}})
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['PROCESSED_FOLDER'] = 'processed'
