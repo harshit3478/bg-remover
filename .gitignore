@@ -6,3 +6,10 @@ frontend/.env
 frontend/.next*
 frontend/.yarn 
 frontend/.vscode
+frontend2/.env
+frontend2/.next*
+frontend2/.yarn
+frontend2/.vscode
+frontend2/node_modules
+backend/node_modules
+backend/venv

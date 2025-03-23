@@ -16,7 +16,7 @@ RUN mkdir -p uploads processed
 RUN chmod -R 777 uploads processed
 
 # Expose port
-EXPOSE 5001
+EXPOSE 5055
 
 # Run the application with increased timeout
-CMD ["gunicorn", "--bind", "0.0.0.0:5001", "--timeout", "300", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5055", "--timeout", "300", "app:app"]
